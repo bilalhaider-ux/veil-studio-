@@ -443,6 +443,22 @@ function AppContent() {
                   <span className="italic font-normal text-neutral-400">thoughtful</span> <br />
                   digital spaces.
                 </motion.h1>
+
+                {/* Direct CTA Button for immediate navigation */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.6 }}
+                  className="mt-10"
+                >
+                  <a 
+                    href="#contact" 
+                    onClick={(e) => handleNavClick(e, '#contact')}
+                    className="inline-flex items-center gap-3 text-xs tracking-widest font-mono uppercase group border border-black bg-black text-white px-8 py-4 hover:bg-neutral-800 transition-all duration-300"
+                  >
+                    Send inquiry <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </motion.div>
               </div>
 
               <div className="w-full max-w-6xl mx-auto mt-8 flex flex-col md:flex-row md:items-center justify-between border-t border-black/10 pt-10 gap-8 relative z-10">
@@ -604,10 +620,10 @@ function AppContent() {
                       </div>
 
                       {/* Card Content */}
-                      <span className={`font-mono text-sm block mb-6 text-neutral-400 md:text-neutral-500 md:group-hover:text-neutral-400 relative z-10 transition-colors duration-500 ${activeService === index ? 'md:text-neutral-400' : ''}`}>{service.num}</span>
+                      <span className={`font-mono text-sm block mb-6 text-neutral-200 md:text-neutral-500 md:group-hover:text-neutral-200 relative z-10 transition-colors duration-500 ${activeService === index ? 'md:text-neutral-200' : ''}`}>{service.num}</span>
                       <div className="relative z-10">
                         <h3 className="text-2xl font-serif font-medium mb-4">{service.name}</h3>
-                        <p className={`text-sm text-neutral-300 md:text-neutral-600 md:group-hover:text-neutral-300 transition-colors duration-500 ${activeService === index ? 'md:text-neutral-300' : ''}`}>
+                        <p className={`text-sm text-white md:text-neutral-600 md:group-hover:text-white transition-colors duration-500 ${activeService === index ? 'md:text-white' : ''}`}>
                           {service.description}
                         </p>
                       </div>
@@ -633,13 +649,13 @@ function AppContent() {
                       alt="About philosophy" 
                       className="absolute inset-0 w-full h-full object-cover grayscale contrast-105"
                     />
-                    <div className="absolute inset-0 bg-black/20 flex flex-col justify-between p-6 md:p-12 text-white">
-                      <span className="font-mono text-xs tracking-widest uppercase bg-black/40 w-max px-2 py-1">
+                    <div className="absolute inset-0 bg-black/45 flex flex-col justify-between p-6 md:p-12 text-white">
+                      <span className="font-mono text-xs tracking-widest uppercase bg-black/60 w-max px-2 py-1">
                         EST. 2026 / PHILOSOPHY
                       </span>
-                      <div className="max-w-xs bg-black/40 p-4">
-                        <h4 className="font-serif text-2xl font-light italic mb-2">Simplicity</h4>
-                        <p className="text-xs text-neutral-300 font-light leading-relaxed">
+                      <div className="max-w-xs bg-black/75 p-4 border border-white/10 rounded-sm">
+                        <h4 className="font-serif text-2xl font-light italic mb-2 text-white">Simplicity</h4>
+                        <p className="text-xs text-white font-medium leading-relaxed">
                           "Complexity is easy. Simplicity is difficult. Designing something beautiful means deleting everything else."
                         </p>
                       </div>
